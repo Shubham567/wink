@@ -13,9 +13,11 @@
   "author": "Wink",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^6.9.0",
     "@tensorflow/tfjs-node": "^4.1.0",
     "ansi-colors": "^4.1.3",
     "cli-progress": "^3.11.2",
+    "dotenv": "^16.0.3",
     "nsfwjs": "^2.4.2"
   },
   "devDependencies": {

@@ -38,5 +38,6 @@ const uniqueFolders = [...new Set([...filterThresholds.map(({folder}) => folder)
 module.exports = {
     doClassificationFlattening,
     isFileDownloaded,
-    checkFileExists
+    checkFileExists,
+    uniqueFolders
 }

@@ -1,10 +1,17 @@
+
 /node_modules
+
+# Images
 /images/
 /clean/
 /nsfw/
 /porn/
 /hentai/
 
-.idea/
+# Keys
+/keys/*
 
+# Id
+.idea/
+.vscode/
 .env*

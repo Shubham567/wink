@@ -5,7 +5,7 @@
  const cleanFolder = "clean"
  const drawingFolder = "drawing"
 
- const key = "zQM5b4C6Ebb6BqW8439JPWomNI5jILLswNRxD7w4ytU52Nbb5JQfULA87NR7";
+ const key = process.env.API_KEY;
 
  const filterThresholds = [
     {

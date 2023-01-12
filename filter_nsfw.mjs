@@ -2,6 +2,9 @@
 
 $.verbose = false
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 import * as nsfwjs from "nsfwjs"
 import fs from "fs"
 import tf from "@tensorflow/tfjs-node"

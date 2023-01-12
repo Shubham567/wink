@@ -2,6 +2,9 @@
 
 $.verbose = false
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 import cliProgress from "cli-progress";
 import colors from "ansi-colors"
 
@@ -72,6 +75,7 @@ for(let i = startId; i >= endId; i -= concurrent){
                     dataObject = JSON.parse(hopefullyJs);
                     if(!!dataObject.output){
                         await $`curl ${dataObject.output?.[0]} --output ${pwd}/${imageFolder}/${file}.png`
+
                         await $`cd ${pwd}`
                         counts.downloaded++;
                     }
