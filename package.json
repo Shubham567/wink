@@ -4,7 +4,8 @@
   "description": "wink wink wink . . .",
   "main": "wink.js",
   "scripts": {
-    "test": "zx wink.js"
+    "test": "zx wink.js",
+    "start": "zx server_download.mjs"
   },
   "keywords": [
     "wink"
