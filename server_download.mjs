@@ -31,7 +31,7 @@ const counts = {
 
 const startId = process.argv[3] || 300000;
 // const endId = 1100000;
-const endId = startId + 500;
+const endId = startId * 4;
 
 const progress = new cliProgress.SingleBar({
     format: 'Downloading Files |' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Files',
@@ -94,12 +94,12 @@ for(let i = startId; i <= endId; i += concurrent){
                         const imageFilter = filterThresholds.find(filter => newClassification[filter.name] >= filter.threshold);
                         
                         if(imageFilter){
-                            console.log("Image Filtered: ", imageFilter.name);
-                            imageBucket.file(`${DOWNLOAD_BASE_PATH}/${imageFilter.folder}/${file}.png`).save(img);
+                            // console.log("Image Filtered: ", imageFilter.name);
+                            await imageBucket.file(`${DOWNLOAD_BASE_PATH}/${imageFilter.folder}/${file}.png`).save(img);
 
                         }
                         else{
-                            imageBucket.file(`${DOWNLOAD_BASE_PATH}/clean/${file}.png`).save(img);
+                            await imageBucket.file(`${DOWNLOAD_BASE_PATH}/clean/${file}.png`).save(img);
                         }
 
                         counts.downloaded++;
