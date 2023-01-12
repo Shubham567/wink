@@ -1,0 +1,24 @@
+{
+  "name": "wink",
+  "version": "1.0.0",
+  "description": "wink wink wink . . .",
+  "main": "wink.js",
+  "scripts": {
+    "test": "zx wink.js"
+  },
+  "keywords": [
+    "wink"
+  ],
+  "packageManager": "yarn@1.22.19",
+  "author": "Wink",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.1.0",
+    "ansi-colors": "^4.1.3",
+    "cli-progress": "^3.11.2",
+    "nsfwjs": "^2.4.2"
+  },
+  "devDependencies": {
+    "zx": "^7.1.1"
+  }
+}
