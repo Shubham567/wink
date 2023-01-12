@@ -1,0 +1,16 @@
+.idea/
+.dockerignore
+.gitignore
+
+.git/
+
+clean/
+hentai/
+images/
+nsfw/
+porn/
+drawing/
+
+node_modules/
+
+

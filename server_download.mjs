@@ -29,9 +29,9 @@ const counts = {
     ignored : 0,
 }
 
-const startId = process.argv[3] || 300000;
+const startId = +process.env.START_ID || 600000;
 // const endId = 1100000;
-const endId = startId * 4;
+const endId = +process.env.END_ID || startId * 2;
 
 const progress = new cliProgress.SingleBar({
     format: 'Downloading Files |' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Files',
@@ -107,16 +107,15 @@ for(let i = startId; i <= endId; i += concurrent){
                 }
                 catch(e){
                     // console.log(e);
-                    throw new Error("Something went wrong");
-                    counts.failed++;
-                    // throw e;
+                    // throw new Error("Something went wrong");
+                    throw e;
                 }
                 
             }
             catch(e){
                 if(!ignored){
                     counts.failed++;
-                    console.log(e.message);
+                    console.error(e.message);
                 }
                 // throw e;
             }
