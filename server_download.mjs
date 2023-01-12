@@ -31,7 +31,7 @@ const counts = {
 
 const startId = process.argv[3] || 300000;
 // const endId = 1100000;
-const endId = startId + 100;
+const endId = startId + 500;
 
 const progress = new cliProgress.SingleBar({
     format: 'Downloading Files |' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Files',
