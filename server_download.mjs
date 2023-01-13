@@ -19,7 +19,7 @@ const nsfwjsModel = await nsfwjs.load();
 
 const DOWNLOAD_BASE_PATH = process.env.DOWNLOAD_BASE_PATH || "downloaded"
 
-const concurrent = +process.env.CUNCURRENT || 3;
+const concurrent = +process.env.CUNCURRENT || 1;
 
 const { imageBucket } = require("./gsc");
 
